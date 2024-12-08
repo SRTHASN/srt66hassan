@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز شرطة 66</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl; /* محاذاة النص إلى اليمين */
+            background-color: #f0f0f0; /* لون خلفية الصفحة */
+        }
+        header {
+            background-color: black; /* لون خلفية شريط العنوان */
+            color: white;
+            padding: 10px;
+            border-bottom: 5px solid red; /* إطار أحمر في الأسفل */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .search-container {
+            display: flex;
+        }
+        .search-container input[type="text"] {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+        }
+        .search-container button {
+            padding: 5px 10px;
+            border: none;
+            background-color: red;
+            color: white;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: darkred;
+        }
+        .container {
+            padding: 20px;
+        }
+        .ads {
+            background-color: #ffffff; /* لون خلفية الإعلانات */
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .news, .images {
+            margin: 10px 0;
+        }
+        .image-container {
+            width: 640px; /* عرض ثابت للصور */
+            height: 399px; /* ارتفاع ثابت للصور */
+            overflow: hidden; /* إخفاء الأجزاء الزائدة من الصورة */
+            border-radius: 10px; /* زوايا دائرية للصورة */
+            margin: 0 auto; /* لتوسيع الصورة */
+        }
+        .news {
+            background-color: #ffffff; /* لون خلفية شريط الأخبار */
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .news-item {
+            display: flex;
+            border: 2px solid red; /* إطار أحمر حول الأخبار */
+            padding: 10px;
+            margin: 5px 0; /* مسافة بين الأخبار */
+            border-radius: 5px; /* زوايا دائرية للإطار */
+            opacity: 0; /* اجعلها غير مرئية في البداية */
+            transition: opacity 0.5s ease; /* تأثير التلاشي */
+        }
+        .show {
+            opacity: 1; /* اجعلها مرئية */
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #004080; /* لون خلفية التذييل */
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .section {
+            margin: 20px 0;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>مركز شرطة 66</h1>
+    <nav>
+        <a href="#home">الرئيسية</a>
+        <a href="services.html">الخدمات الإلكترونية</a>
+        <a href="about.html">حول المركز</a>
+        <a href="contact.html">معلومات الاتصال</a>
+    </nav>
+    <div class="search-container">
+        <input type="text" placeholder="ابحث هنا...">
+        <button>بحث</button>
+    </div>
+</header>
+
+<div class="container">
+    <div class="ads">
+        <h2>الإعلانات</h2>
+        <img src="3ln.jpg" alt="إعلانات" style="width: 100%; height: auto; border-radius: 5px;"> <!-- إضافة الصورة هنا -->
+    </div>
+
+    <div class="news">
+        <h2>آخر الأخبار</h2>
+        <div id="news-container">
+            <!-- ستظهر الأخبار هنا -->
+        </div>
+    </div>
+
+    <div class="images">
+        <div class="image-container">
+            <img id="slideshow" src="c1.jpg" alt="صورة مركز الشرطة">
+        </div>
+    </div>
+
+    <div id="services" class="section">
+        <h2>الخدمات الإلكترونية</h2>
+        <ul>
+            <li>خدمة الإبلاغ عن الجرائم عبر الإنترنت.</li>
+            <li>استعلام عن الطلبات المقدمة.</li>
+            <li>تقديم الشكاوى والاقتراحات.</li>
+            <li>حجز المواعيد للاستفسارات.</li>
+            <li>تتبع حالة البلاغات المقدمة.</li>
+        </ul>
+    </div>
+
+    <div id="about" class="section">
+        <h2>حول المركز</h2>
+        <p>مركز شرطة 66 هو مؤسسة أمنية تهدف إلى توفير الأمان والحماية للمواطنين في منطقة 66. يقدم المركز مجموعة من الخدمات الأمنية والمجتمعية بما في ذلك:</p>
+        <ul>
+            <li>تنفيذ حملات توعية بالأمن والسلامة.</li>
+            <li>التعاون مع المجتمع لتعزيز الأمان.</li>
+            <li>توفير خدمات استشارية للمواطنين.</li>
+            <li>العمل على مكافحة الجريمة بكل أشكالها.</li>
+            <li>تعزيز الروابط بين الشرطة والمجتمع المحلي.</li>
+        </ul>
+    </div>
+
+    <div id="contact">
+        <h2>معلومات الاتصال</h2>
+        <p>للاستفسارات أو الشكاوى، يمكنك الاتصال بنا على الأرقام التالية:</p>
+        <p>الهاتف: 6666</p>
+        <p>البريد الإلكتروني: <a href="mailto:police66@gmail.iq">police66@gmail.iq</a></p>
+        <p>العنوان: منطقة 66، الشارع الرئيسي</p>
+    </div>
+</div>
+
+<footer>
+    <p>حقوق الطبع والنشر © 2024 مركز شرطة 66. جميع الحقوق محفوظة.</p>
+</footer>
+
+<script>
+    // معلومات الصور
+    const images = ['c1.jpg', 'c2.jpg', 'c3.jpeg', 'c4.jpg', 'c5.jpg'];
+    let currentImage = 0;
+
+    function changeImage() {
+        currentImage = (currentImage + 1) % images.length;
+        document.getElementById('slideshow').src = images[currentImage];
+    }
+
+    setInterval(changeImage, 5000); // تغيير الصورة كل 5 ثواني
+
+    // معلومات الأخبار
+    const newsItems = [
+        'خبر : تم افتتاح مركز جديد للشرطة في منطقة 66.',
+        'خبر : تم إجراء حملة أمنية ناجحة في المنطقة.',
+        'خبر : تم القبض على مشتبه به في قضية سرقة.',
+        'خبر : تعاونت الشرطة مع المجتمع لتعزيز الأمان.',
+        'خبر : تقديم دورات تدريبية للشرطة لتعزيز المهارات.',
+        'خبر : زيادة الدوريات الأمنية في المنطقة.',
+        'خبر : إطلاق خدمة جديدة للإبلاغ عن الجرائم.',
+        'خبر : تحسين نظام الاتصالات في مركز الشرطة.',
+        'خبر : تنظيم ورشة عمل حول مكافحة الجريمة.',
+        'خبر : تفعيل خطوط ساخنة للإبلاغ عن الحوادث.',
+        'خبر : تقديم خدمات جديدة للمواطنين.',
+        'خبر : انطلاق حملة توعية عن الأمن والسلامة.',
+        'خبر : تعزيز التعاون مع الجهات الحكومية.',
+        'خبر : إطلاق برنامج لمساعدة الضحايا.',
+        'خبر : تكريم رجال الشرطة المتميزين.',
+        'خبر : زيادة عدد الكاميرات في الشوارع.',
+        'خبر  تنظيم فعاليات رياضية لتعزيز الروح الرياضية.',
+        'خبر  عقد اجتماعات مع المجتمع المحلي.',
+        'خبر  تحديث معدات الشرطة لتحسين الأداء.',
+        'خبر  تنظيم زيارات للمدارس لتعزيز الأمن.'
+    ];
+
+    let currentNewsIndex = 0;
+
+    function showNews() {
+        const newsContainer = document.getElementById('news-container');
+        const newsItem = document.createElement('div');
+        newsItem.className = 'news-item';
+        newsItem.innerText = newsItems[currentNewsIndex];
+        newsContainer.appendChild(newsItem);
+        newsItem.classList.add('show'); // إضافة الفئة show لتفعيل التأثير
+
+        currentNewsIndex = (currentNewsIndex + 1) % newsItems.length;
+        setTimeout(() => {
+            newsItem.remove(); // إزالة الأخبار بعد فترة
+        }, 5000); // 5 ثواني
+    }
+
+    setInterval(showNews, 3000); // عرض الأخبار كل 3 ثواني
+</script>
+</body>
+</html>
